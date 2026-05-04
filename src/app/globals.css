@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gpt-color:    #10a37f;
+  --claude-color: #D85A30;
+  --gemini-color: #4285F4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fafaf9;
+  color: #1a1a1a;
+  font-family: 'Geist', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d0cdc7; border-radius: 999px; }
+
+/* Input focus rings */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.14);
+  border-color: #1D9E75 !important;
+}
+
+/* Highlight brand mentions */
+mark {
+  background: #E1F5EE;
+  color: #0F6E56;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-weight: 500;
+  border: 0.5px solid #5DCAA5;
+}
+
+mark.user-brand {
+  background: #fef9c3;
+  color: #713f12;
+  border-color: #fde047;
+}
