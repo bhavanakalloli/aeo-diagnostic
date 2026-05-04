@@ -25,7 +25,7 @@ function extractBrands(text: string, query: string = ''): string[] {
     'in india','india','brands','products','options']
   
   const matches = text.match(/\b[A-Z][a-zA-Z&'-]+(?:\s+[A-Z][a-zA-Z&'-]+)?\b/g) || []
-  return [...new Set(matches)].filter(w => {
+  return Array.from(new Set(matches)).filter(w => {
     const lower = w.toLowerCase()
     if (w.length < 3) return false
     if (JUNK.some(j => lower.includes(j))) return false
