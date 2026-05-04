@@ -43,7 +43,7 @@ export default function ResultsScreen({ result, onReset, onNewBrand, history }: 
 }, [responses, query])
 
   const allBrands = useMemo(() => {
-    return [...new Set(Object.values(brandMap).flat())]
+    return Array.from(new Set(Object.values(brandMap).flat()))
   }, [brandMap])
 
   const leaderboard = useMemo(() => buildLeaderboard(brandMap), [brandMap])

@@ -56,7 +56,7 @@ const STOP_WORDS = new Set([
 export function extractBrands(text: string, query: string = ''): string[] {
   const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 2)
   const matches = text.match(/\b[A-Z][a-zA-Z&'-]+(?:\s+[A-Z][a-zA-Z&'-]+)?\b/g) || []
-  const unique = [...new Set(matches)]
+  const unique = Array.from(new Set(matches))
   const GENERIC = new Set([
     'These','Those','There','Their','They','This','When','What','While',
     'With','From','After','Also','Both','Each','Some','Many','More','Most',
