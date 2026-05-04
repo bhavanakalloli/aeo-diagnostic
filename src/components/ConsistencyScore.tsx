@@ -163,7 +163,7 @@ export default function ConsistencyScore({ query }: Props) {
                 const modelRuns = runs[model] || []
                 const score = getConsistencyScore(modelRuns)
                 const { label, color } = getConsistencyLabel(score)
-                const allBrands = [...new Set(modelRuns.flat().map(b => b.toLowerCase()))]
+                const allBrands = Array.from(new Set(modelRuns.flat().map(b => b.toLowerCase())))
 
                 return (
                   <div key={model} className="p-4 rounded-xl border border-gray-100 bg-gray-50">
