@@ -25,7 +25,7 @@ Amazon sellers have no idea how they rank in AI search. This tool fixes that in 
 
 ## Live Demo
 
-https://aeo-diagnostic.vercel.app
+https://aeo-diagnostic-one.vercel.app
 
 ## Features
 
