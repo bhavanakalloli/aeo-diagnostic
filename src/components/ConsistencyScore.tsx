@@ -39,10 +39,10 @@ function extractBrands(text: string, query: string = ''): string[] {
 
 function jaccardSimilarity(a: string[], b: string[]): number {
   if (!a.length && !b.length) return 1
-  const setA = new Set(a.map(x => x.toLowerCase()))
+  const setA = Array.from(new Set(a.map(x => x.toLowerCase())))
   const setB = new Set(b.map(x => x.toLowerCase()))
-  const intersection = [...setA].filter(x => setB.has(x)).length
-  const union = new Set([...setA, ...setB]).size
+  const intersection = setA.filter(x => setB.has(x)).length
+  const union = new Set([...setA, ...Array.from(setB)]).size
   return union === 0 ? 0 : Math.round((intersection / union) * 100)
 }
 
