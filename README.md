@@ -1,6 +1,20 @@
 # AEO Diagnostic 🔍
 The Google Search Console — but for AI.
 
+## Screenshots
+
+### Homepage
+![Homepage](public/screenshots/homepage.png)
+
+### Results — 100% Visibility Score
+![Results](public/screenshots/results.png)
+
+### AI Consistency Score
+![Consistency](public/screenshots/consistency.png)
+
+### Brand Leaderboard & Strategic Insights
+![Leaderboard](public/screenshots/leaderboard.png)
+
 ## What is AEO?
 
 AEO = Answer Engine Optimization
